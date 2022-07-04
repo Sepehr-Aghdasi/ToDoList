@@ -69,13 +69,10 @@ const addItem = () => {
 };
 
 // find out if an array contains a duplicate string
-function stringExistInArray(arrayOfArrays, item) {
-      // convert to lowercase string and after that check
-      arrayOfArrays = arrayOfArrays.map((str) => str.toLowerCase());
-      item = item.toLowerCase();
+// convert to lowercase string and after that check
+const stringExistInArray = (strings, item) =>
+  strings.some(str => str.toLowerCase() === item.toLowerCase());
 
-      return arrayOfArrays.includes(item);
-}
 
 // show message to client
 const displayAlert = (text, color) => {
